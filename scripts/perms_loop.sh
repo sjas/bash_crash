@@ -11,7 +11,7 @@ params=('u=rx' 'go-rwx' 'g+w' 'a+x' 'g+rx,o+x')
 echo "Indices of this list:" ${!params[*]}
 echo "Number of parameters:" ${#params[*]}
 
-echo -n "Length of each parameter:" 
+echo "Length of each parameter:" 
 
 upper_bounds=$[${#params[*]}-1] # list goes form 0 to 4
 
