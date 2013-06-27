@@ -15,7 +15,9 @@ echo "Length of each parameter:"
 
 upper_bounds=$[${#params[*]}-1] # list goes form 0 to 4
 
-for i in `seq 0 $upper_bounds`; do echo "$i ${#params[i]}"; done # Notice ';' delimiters on single line.
+# Note that seq does not work on Mac.
+# Note that {..} range must be converted to synatx below if variable is involved.
+for (( i=0; i<=$upper_bounds; i++ )); do echo "$i ${#params[i]}"; done # Notice ';' delimiters on single line.
 
 for i in ${params[*]}
 do
